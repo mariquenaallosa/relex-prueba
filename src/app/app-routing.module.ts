@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PostListComponent } from './posts/components/post-list/post-list.component';
-import { PostCreateComponent } from './posts/components/post-create/post-create.component';
+
 
 const routes: Routes = [
-  { path: '',  loadChildren: () => import ('./posts/posts.module').then(m => m.PostsModule) },
-
+  { path: '', redirectTo: 'publicaciones', pathMatch: 'full' },
+  { path: 'publicaciones', loadChildren: () => import ('./posts/posts.module').then(m => m.PostsModule) },
 ];
 
 @NgModule({

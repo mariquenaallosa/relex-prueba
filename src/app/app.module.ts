@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { PostService } from './core/services/post.service';
+import { PostsModule } from './posts/posts.module';
 import { PostsRoutingModule } from './posts/posts-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,7 @@ import { PostsRoutingModule } from './posts/posts-routing.module';
     NgxPaginationModule,
     HttpClientModule,
     FormsModule,
+    PostsModule,
     PostsRoutingModule
   ],
   providers: [

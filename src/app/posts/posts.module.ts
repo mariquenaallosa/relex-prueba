@@ -17,6 +17,10 @@ import { PostsRoutingModule } from './posts-routing.module';
     FormsModule,
     NgxPaginationModule,
     PostsRoutingModule
+  ],
+  exports:[
+    PostListComponent,
+    PostCreateComponent
   ]
 })
 export class PostsModule { }

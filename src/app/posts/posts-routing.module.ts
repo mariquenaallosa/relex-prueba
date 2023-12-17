@@ -5,7 +5,7 @@ import { PostListComponent } from './components/post-list/post-list.component';
 
 
 const routes: Routes = [
-  { path: 'publicaciones', component: PostListComponent },
+  { path: '', component: PostListComponent },
   { path: 'crear-publicacion', component: PostCreateComponent },
   
 ];
