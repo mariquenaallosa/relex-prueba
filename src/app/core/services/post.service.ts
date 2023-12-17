@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from '../models/post';
@@ -11,9 +11,19 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  // Obtener todos los posts
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiUrl);
+  // Obtener posts con paginación y filtrado por título
+  getPosts(page:number, searchTerm?:string): Observable<Post[]> {
+    let params = new HttpParams()
+    params = params.append('page', page.toString());
+
+
+
+    if(searchTerm){
+      params = params.set('title', searchTerm)
+    }
+
+    // Realizar solicitud HTTP GET a la API JSONPlaceholder
+    return this.http.get<Post[]>(this.apiUrl, {params});
   }
 
   // Obtener por id
