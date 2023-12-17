@@ -1,0 +1,14 @@
+<p>post-create works!</p>
+<!-- post-create.component.html -->
+<div>
+    <h2>Crear nueva publicación</h2>
+    <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm) ">
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" ngModel required>
+  
+      <label for="body">Contenido:</label>
+      <textarea id="body" name="body" ngModel required></textarea>
+  
+      <button type="submit">Crear Post</button>
+    </form>
+  </div>

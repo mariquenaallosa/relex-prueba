@@ -1,0 +1,26 @@
+<p>post-create works!</p>
+<div class="row">
+    <div class="col-md-6 mb3">
+        <label for="search">Buscar por título:</label>
+        <input class="form-control"  type="text" id="search" [(ngModel)]="searchTerm" (input)="onSearchChange()" autocomplete="off">
+    </div>
+    
+    <div *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: page }">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+    </div>
+    
+    <div class="pagination-container text-center">
+      <pagination-controls 
+        (pageChange)="onPageChange($event)"
+        [maxSize]= 9
+        [directionLinks]="true"
+        [responsive]= true
+        previousLabel="Previous"
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination"
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page">
+      </pagination-controls>
+    </div>
+  </div>
