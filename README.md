@@ -54,7 +54,7 @@ src/
 1. Clona el repositorio:
 
    ```bash
-   git clone https://tu-repositorio.git
+   git clone https://github.com/mariquenaallosa/relex-prueba.git
 
 2. Instala las dependencias
 
