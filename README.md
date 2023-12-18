@@ -5,26 +5,47 @@ Este es un proyecto de demostración de una aplicación web utilizando Angular p
 ## Estructura del Proyecto
 
 src/
+
 |-- app/
+
 | |-- core/
+
 | | |-- models/
+
 | | | |-- post.ts
+
 | | |-- services/
+
 | | | |-- post.service.ts
+
 | |-- posts/
+
 | | |-- components/
+
 | | | |-- post-create/
+
 | | | |-- post-list/
+
 | | |-- posts-routing.module.ts
+
 | | |-- posts.module.ts
+
 | |-- shared/
+
 | | |-- shared.module.ts
+
 | |-- app-routing.module.ts
+
 | |-- app.module.ts
+
 | |-- app.component.html
+
 | |-- app.component.css
+
 | |-- app.component.ts
+
 | |-- app.component.spec.ts
+
 |-- assets/
 
 
