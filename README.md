@@ -58,12 +58,14 @@ src/
 
 2. Instala las dependencias
 
-    ```cd nombre-del-proyecto
+    ```bash
+    cd nombre-del-proyecto
     npm install
 
 3. Ejecutar la aplicación
 
-    ```ng serve
+    ```bash
+    ng serve
 
 ## Estructura del Código
  - __*core*__: Contiene modelos y servicios esenciales para la aplicación.
