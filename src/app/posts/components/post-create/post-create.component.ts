@@ -41,7 +41,7 @@ export class PostCreateComponent implements OnInit {
           (response) => {
             this.router.navigate(['/publicaciones']);
             console.log('Post creado con éxito:', response);
-            // Puedes redirigir al usuario a la página de listado de posts u otra acción después de la creación.
+            
           },
           (error) => {
             console.error('Error al crear el post:', error);

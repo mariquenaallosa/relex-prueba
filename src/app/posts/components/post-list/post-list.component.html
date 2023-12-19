@@ -21,7 +21,9 @@
         </div>
       </div>
     </div>
-
+    <div class="alert alert-warning mt-3" *ngIf="filteredPosts?.length === 0">
+      <p>No se encontraron posts.</p>
+    </div>
     <div class="col-md-12 mt-3">
       <div class="pagination-container  text-center ">
         <pagination-controls (pageChange)="onPageChange($event)" [maxSize]=9 [directionLinks]="true" [responsive]=true
@@ -29,9 +31,6 @@
           screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
         </pagination-controls>
       </div>
-    </div>
-    <div class="alert alert-warning mt-3" *ngIf="filteredPosts.length === 0">
-      <p>No se encontraron posts.</p>
     </div>
   </div>
 </div>

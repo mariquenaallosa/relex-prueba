@@ -52,9 +52,10 @@ export class PostListComponent implements OnInit {
 
   applyFilter(): void {
     // Filtra los posts por título usando el texto de búsqueda
-    this.posts = this.posts.filter((post) =>
+    this.filteredPosts = this.posts.filter((post) =>
       post.title.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
+    this.posts = this.filteredPosts
   }
 
   updateUrl() {
