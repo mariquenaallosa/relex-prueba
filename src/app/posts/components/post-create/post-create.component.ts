@@ -35,6 +35,7 @@ export class PostCreateComponent implements OnInit {
         const postData: Post = {
           title: titleControl.value,
           body: contentControl.value,
+          userId : 1,
         };
   
         this.postService.createPost(postData).subscribe(
