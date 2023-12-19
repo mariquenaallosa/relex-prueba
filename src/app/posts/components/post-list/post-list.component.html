@@ -1,16 +1,18 @@
 <div class="container mt-3">
   <div class="row">
 
-     <!-- Barra de búsqueda -->
-    <div class="input-group col-md-6 mb-3">
-      <input class="form-control focus-ring focus-ring-secondary border rounded-1" placeholder="Buscar por título" type="text" id="search" [(ngModel)]="searchTerm"
-        (input)="onSearchChange()">
+    <!-- Barra de búsqueda -->
+    <div class="input-group col-md-8">
+      <input class="form-control focus-ring focus-ring-secondary border" placeholder="Buscar por título"
+        type="search" id="search-input" [(ngModel)]="searchTerm" (input)="onSearchChange()">
     </div>
 
+
     <!-- Lista de publicaciones -->
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
       <div class="row">
-        <div *ngFor="let post of filteredPosts | paginate: { itemsPerPage: 10, currentPage: page }" class="col-md-6 mb-4">
+        <div *ngFor="let post of filteredPosts | paginate: { itemsPerPage: 10, currentPage: page }"
+          class="col-md-6 mb-4">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
