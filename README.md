@@ -8,7 +8,6 @@ Este proyecto es un ejemplo práctico de una aplicación web desarrollada con An
  - Creación de nuevas publicaciones mediante un formulario.
  - Uso de servicios para comunicarse con el servidor (JSONPlaceholder).
  - Estilos gestionados con Bootstrap.
-
 ## 🏗 Estructura del Proyecto
 
 ```plaintext
@@ -26,6 +25,8 @@ src/
 |   |   |-- posts-routing.module.ts
 |   |   |-- posts.module.ts
 |   |-- shared/
+|   |   |-- components/
+|   |   |   |-- navbar/
 |   |   |-- shared.module.ts
 |-- app-routing.module.ts
 |-- app.module.ts
@@ -34,8 +35,7 @@ src/
 |-- app.component.ts
 |-- app.component.spec.ts
 |-- assets/
-
-
+```
 
 ## ⌨🖱 Instalación y Ejecución
 
