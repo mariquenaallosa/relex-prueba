@@ -5,6 +5,7 @@ import { PostCreateComponent } from './components/post-create/post-create.compon
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PostsRoutingModule } from './posts-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PostsRoutingModule } from './posts-routing.module';
     CommonModule,
     FormsModule,
     NgxPaginationModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    ReactiveFormsModule
   ],
   exports:[
     PostListComponent,
