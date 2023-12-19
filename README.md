@@ -1,55 +1,46 @@
-# Relex
+# 💻 Relex Test
 
-Este es un proyecto de demostración de una aplicación web utilizando Angular para gestionar publicaciones.
+Este proyecto es un ejemplo práctico de una aplicación web desarrollada con Angular para gestionar publicaciones. Utiliza una arquitectura modular para organizar el código y aprovecha servicios y modelos en el núcleo de la aplicación. El módulo "posts" se especializa en la gestión de publicaciones, mientras que el módulo "shared" proporciona componentes reutilizables para toda la aplicación.
 
-## Estructura del Proyecto
+## 📌 Características principales
 
+ - Listado paginado y filtrado de publicaciones.
+ - Creación de nuevas publicaciones mediante un formulario.
+ - Uso de servicios para comunicarse con el servidor (JSONPlaceholder).
+ - Estilos gestionados con Bootstrap.
+
+## 🏗 Estructura del Proyecto
+
+```plaintext
 src/
-
 |-- app/
-
-| |-- core/
-
-| | |-- models/
-
-| | | |-- post.ts
-
-| | |-- services/
-
-| | | |-- post.service.ts
-
-| |-- posts/
-
-| | |-- components/
-
-| | | |-- post-create/
-
-| | | |-- post-list/
-
-| | |-- posts-routing.module.ts
-
-| | |-- posts.module.ts
-
-| |-- shared/
-
-| | |-- shared.module.ts
-
-| |-- app-routing.module.ts
-
-| |-- app.module.ts
-
-| |-- app.component.html
-
-| |-- app.component.css
-
-| |-- app.component.ts
-
-| |-- app.component.spec.ts
-
+|   |-- core/
+|   |   |-- models/
+|   |   |   |-- post.ts
+|   |   |-- services/
+|   |   |   |-- post.service.ts
+|   |-- posts/
+|   |   |-- components/
+|   |   |   |-- post-create/
+|   |   |   |-- post-list/
+|   |   |-- posts-routing.module.ts
+|   |   |-- posts.module.ts
+|   |-- shared/
+|   |   |-- shared.module.ts
+|-- app-routing.module.ts
+|-- app.module.ts
+|-- app.component.html
+|-- app.component.css
+|-- app.component.ts
+|-- app.component.spec.ts
 |-- assets/
 
 
-## Instalación
+
+## ⌨🖱 Instalación y Ejecución
+
+Sigue las instrucciones detalladas a continuación para clonar, instalar y ejecutar la aplicación:
+
 
 1. Clona el repositorio:
 
@@ -59,7 +50,7 @@ src/
 2. Instala las dependencias
 
     ```bash
-    cd nombre-del-proyecto
+    cd relex-prueba
     npm install
 
 3. Ejecutar la aplicación
@@ -67,10 +58,13 @@ src/
     ```bash
     ng serve
 
-## Estructura del Código
- - __*core*__: Contiene modelos y servicios esenciales para la aplicación.
- - __*posts*__: Módulo específico para la gestión de publicaciones.
- - __*shared*__: Módulo compartido con componentes reutilizables.
+Este conjunto de comandos te permitirá tener la aplicación en funcionamiento localmente.
+
+## Demo 
+
+*próximamente*
 
 
-
+## 📩 Contacto
+🙋Si te interesa ponerte en contacto conmigo podés hacerlo a través de:
+**[LinkedIn ](https://www.linkedin.com/in/mariquenaallosa/) - [Github ](https://github.com/mariquenaallosa)**
