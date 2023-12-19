@@ -1,27 +1,70 @@
-# Relex
+# 💻 Relex Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+Este proyecto es un ejemplo práctico de una aplicación web desarrollada con Angular para gestionar publicaciones. Utiliza una arquitectura modular para organizar el código y aprovecha servicios y modelos en el núcleo de la aplicación. El módulo "posts" se especializa en la gestión de publicaciones, mientras que el módulo "shared" proporciona componentes reutilizables para toda la aplicación.
 
-## Development server
+## 📌 Características principales
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ - Listado paginado y filtrado de publicaciones.
+ - Creación de nuevas publicaciones mediante un formulario.
+ - Uso de servicios para comunicarse con el servidor (JSONPlaceholder).
+ - Estilos gestionados con Bootstrap.
+## 🏗 Estructura del Proyecto
 
-## Code scaffolding
+```plaintext
+src/
+|-- app/
+|   |-- core/
+|   |   |-- models/
+|   |   |   |-- post.ts
+|   |   |-- services/
+|   |   |   |-- post.service.ts
+|   |-- posts/
+|   |   |-- components/
+|   |   |   |-- post-create/
+|   |   |   |-- post-list/
+|   |   |-- posts-routing.module.ts
+|   |   |-- posts.module.ts
+|   |-- shared/
+|   |   |-- components/
+|   |   |   |-- navbar/
+|   |   |-- shared.module.ts
+|-- app-routing.module.ts
+|-- app.module.ts
+|-- app.component.html
+|-- app.component.css
+|-- app.component.ts
+|-- app.component.spec.ts
+|-- assets/
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## ⌨🖱 Instalación y Ejecución
 
-## Build
+Sigue las instrucciones detalladas a continuación para clonar, instalar y ejecutar la aplicación:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+1. Clona el repositorio:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/mariquenaallosa/relex-prueba.git
 
-## Running end-to-end tests
+2. Instala las dependencias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    cd relex-prueba
+    npm install
 
-## Further help
+3. Ejecutar la aplicación
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```bash
+    ng serve
+
+Este conjunto de comandos te permitirá tener la aplicación en funcionamiento localmente.
+
+## Demo 
+
+*próximamente*
+
+
+## 📩 Contacto
+🙋Si te interesa ponerte en contacto conmigo podés hacerlo a través de:
+**[LinkedIn ](https://www.linkedin.com/in/mariquenaallosa/) - [Github ](https://github.com/mariquenaallosa)**
