@@ -8,6 +8,7 @@ import { PostsRoutingModule } from './posts-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     PostListComponent,
