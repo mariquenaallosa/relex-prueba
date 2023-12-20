@@ -10,6 +10,7 @@ import { PostService } from './core/services/post.service';
 import { PostsModule } from './posts/posts.module';
 import { PostsRoutingModule } from './posts/posts-routing.module';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -26,7 +27,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
     HttpClientModule,
     FormsModule,
     PostsModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    SharedModule
   ],
   providers: [
     PostService
