@@ -4,6 +4,8 @@ import { PostService } from '../../../core/services/post.service';
 import { Router } from '@angular/router';
 import { Post } from 'src/app/core/models/post';
 
+
+
 @Component({
   selector: 'app-post-create',
   templateUrl: './post-create.component.html',
@@ -40,9 +42,10 @@ export class PostCreateComponent implements OnInit {
   
         this.postService.createPost(postData).subscribe(
           (response) => {
-            this.router.navigate(['/publicaciones']);
+            setTimeout(() => {
+              this.router.navigate(['/publicaciones']);  // Reemplaza con tu ruta de inicio
+            }, 3000);
             console.log('Post creado con éxito:', response);
-            
           },
           (error) => {
             console.error('Error al crear el post:', error);
@@ -51,4 +54,6 @@ export class PostCreateComponent implements OnInit {
       }
     }
   }
+
+
 }  
