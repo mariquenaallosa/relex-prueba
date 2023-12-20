@@ -67,4 +67,4 @@ Este conjunto de comandos te permitirá tener la aplicación en funcionamiento l
 
 ## 📩 Contacto
 🙋Si te interesa ponerte en contacto conmigo podés hacerlo a través de:
-**[LinkedIn ](https://www.linkedin.com/in/mariquenaallosa/) **
+**[LinkedIn ](https://www.linkedin.com/in/mariquenaallosa/)**
