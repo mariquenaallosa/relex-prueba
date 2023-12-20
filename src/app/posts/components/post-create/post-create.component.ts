@@ -24,8 +24,8 @@ export class PostCreateComponent implements OnInit {
 
   ngOnInit() {
     this.postForm = this.fb.group({
-      title: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*'), Validators.minLength(3),Validators.maxLength(100)]],
-      content: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ]*'), Validators.minLength(100), Validators.maxLength(1000)]],
+      title: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9 ",.;:]*'), Validators.minLength(3),Validators.maxLength(150)]],
+      content: ['', [Validators.required, Validators.minLength(50), Validators.maxLength(2000)]],
     });
   }
 
@@ -46,7 +46,7 @@ export class PostCreateComponent implements OnInit {
             this.postCreated = true;
             setTimeout(() => {
               this.router.navigate(['/publicaciones']);  
-            }, 3000);
+            }, 1100);
             console.log('Post creado con éxito:', response);
           },
           (error) => {
