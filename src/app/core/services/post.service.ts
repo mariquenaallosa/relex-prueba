@@ -16,8 +16,6 @@ export class PostService {
     let params = new HttpParams()
     params = params.append('page', page.toString());
 
-
-
     if(searchTerm){
       params = params.set('title', searchTerm)
     }
@@ -27,9 +25,9 @@ export class PostService {
   }
 
   // Obtener por id
-  getPostById(id: number): Observable<Post> {
-    return this.http.get<Post>(`${this.apiUrl}/${id}`);
-  }
+  // getPostById(id: number): Observable<Post> {
+  //   return this.http.get<Post>(`${this.apiUrl}/${id}`);
+  // }
 
   // Crear nuevo post
   createPost(newPost: Post): Observable<Post> {
@@ -37,15 +35,15 @@ export class PostService {
   }
 
   // Actualizar un post
-  updatePost(updatedPost: Post): Observable<Post> {
-    const url = ` ${this.apiUrl}/${updatedPost.id}`
-    return this.http.put<Post>(url, updatedPost);
-  }
+  // updatePost(updatedPost: Post): Observable<Post> {
+  //   const url = ` ${this.apiUrl}/${updatedPost.id}`
+  //   return this.http.put<Post>(url, updatedPost);
+  // }
 
   // Eliminar Post
-  deletePost(postId: number): Observable<void> {
-    const url = `${this.apiUrl}/${postId}`;
-    return this.http.delete<void>(url);
-  }
+  // deletePost(postId: number): Observable<void> {
+  //   const url = `${this.apiUrl}/${postId}`;
+  //   return this.http.delete<void>(url);
+  // }
 
 }

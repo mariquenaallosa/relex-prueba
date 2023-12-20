@@ -1,4 +1,8 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+} from '@angular/core';
 import { PostService } from 'src/app/core/services/post.service';
 import { Post } from 'src/app/core/models/post';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,7 +12,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css'],
 })
-
 export class PostListComponent implements OnInit {
   allPosts: Post[] = [];
   filteredPosts: Post[] = [];
@@ -18,12 +21,12 @@ export class PostListComponent implements OnInit {
   constructor(
     private postService: PostService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private el: ElementRef
   ) {}
 
   ngOnInit(): void {
     this.loadPosts();
-
   }
 
   loadPosts() {
@@ -41,10 +44,11 @@ export class PostListComponent implements OnInit {
     this.page = pageNumber;
     this.updateUrl();
     this.loadPosts();
+    this.scrollToTop();
   }
 
   onSearchChange(): void {
-    this.page = 1; 
+    this.page = 1;
     this.updateUrl();
     this.applyFilter();
   }
@@ -66,6 +70,14 @@ export class PostListComponent implements OnInit {
       relativeTo: this.route,
       queryParams,
       queryParamsHandling: 'merge',
+    });
+  }
+
+  scrollToTop(): void {
+    document.body.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
     });
   }
 
